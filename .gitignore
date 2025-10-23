@@ -1,0 +1,19 @@
+# Salesforce / SFDX
+.sfdx/
+.sf/
+.localdevserver/
+coverage/
+*.log
+
+# VS Code / IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Node / tooling
+node_modules/
+.npm/
+.husky/_/ # generated helper script; keep .husky/* if you use hooks
+
+# Misc
+*.zip

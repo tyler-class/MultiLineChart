@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title={title}>
+        <div
+            class="slds-p-around_medium"
+            style="display:flex; justify-content:center; align-items:center;"
+        >
+            <canvas lwc:dom="manual" style="height:550px; max-width:95%;" class="chart"></canvas>
+        </div>
+        <template if:true={error}>
+            <div class="slds-text-color_error slds-p-horizontal_medium">{error}</div>
+        </template>
+    </lightning-card>
+</template>

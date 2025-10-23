@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Multi-Line Chart</masterLabel>
+
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property name="title" 
+                        label="Title" 
+                        type="String" 
+                        default="Multi-Line Chart"
+                        description="The title that displays above the line graph."/>
+            <property name="fieldsCsv" 
+                        label="Metric Fields (CSV)" 
+                        type="String" 
+                        required="true"
+                        description="Comma-separated list of target object field's API names that will be used as dots on the graph."/>
+            <property name="childObjectApiName" 
+                        label="Child Object API Name" 
+                        type="String" 
+                        required="true"
+                        description="The API name of the target object that will be used to generate dots on the graph."/>
+            <property name="dateFieldApiName" 
+                        label="Date/Datetime Field API Name" 
+                        type="String" 
+                        required="true"
+                        description="The API name of the date field used to create the X-axis on the graph. Can be date or datetime."/>
+            <property name="parentLookupPath"
+                      label="Parent Lookup Path (supports dot notation)"
+                      type="String"
+                      required="true"
+                      description="Parent lookup field from the target record to the current recordId, supports dot notation with __c (not __r). Example: Student__c, Student__c.AccountId, Student__c.Account.OwnerId"/>
+            <property name="dateFilter"
+                      label="Relative Date Filter (optional)"
+                      type="String"
+                      description="Filter the date range of records to display. Compatible with Salesforce literals like THIS_YEAR, LAST_MONTH, NEXT_QUARTER, LAST_N_DAYS:30, etc. Only enter 1. Optional. "/>
+            <property name="maxPoints" label="Max Points" type="Integer" default="200"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
