@@ -4,6 +4,7 @@ public with sharing class MultiLineChartController {
         @AuraEnabled public String dateField;
         @AuraEnabled public List<Map<String, Object>> rows;
         @AuraEnabled public Map<String, String> fieldLabels; 
+        @AuraEnabled public String objectLabel;
     }
 
     @AuraEnabled(cacheable=true)
@@ -55,6 +56,11 @@ public with sharing class MultiLineChartController {
         selectFields.add(dateFieldApiName);
         selectFields.addAll(metrics);
 
+        // If object has a standard Name field, include it for tooltip display
+        if (fmap.containsKey('Name')) {
+            selectFields.add('Name');
+        }
+
         // Validate and normalize the parent lookup path (supports any depth)
         if (!Pattern.matches('^[A-Za-z0-9_\\.]+$', parentLookupPath)) {
             throw new AuraHandledException('Invalid parentLookupPath. Use letters, numbers, underscores, and dots only.');
@@ -91,6 +97,7 @@ public with sharing class MultiLineChartController {
             Map<String, Object> row = new Map<String, Object>();
             row.put('Id', r.get('Id'));
             row.put('x', r.get(dateFieldApiName));
+            if (fmap.containsKey('Name')) row.put('Name', r.get('Name'));
             for (String m : metrics) row.put(m, r.get(m));
             rows.add(row);
         }
@@ -100,6 +107,7 @@ public with sharing class MultiLineChartController {
         res.dateField = dateFieldApiName;
         res.rows = rows;
         res.fieldLabels = fieldLabels;
+        res.objectLabel = d.getLabel();
         return res;
     }
 
