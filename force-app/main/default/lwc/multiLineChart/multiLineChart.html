@@ -1,13 +1,24 @@
 <template>
     <lightning-card title={title}>
+      <div
+        class="slds-p-around_medium"
+        style="display:flex; flex-direction:column; align-items:center;"
+      >
+        <!-- Control Bar -->
         <div
-            class="slds-p-around_medium"
-            style="display:flex; justify-content:center; align-items:center;"
+            class="slds-m-bottom_small"
+            style="align-self:flex-start; padding-left:20px;"
         >
-            <canvas lwc:dom="manual" style="height:550px; max-width:95%;" class="chart"></canvas>
-        </div>
-        <template if:true={error}>
-            <div class="slds-text-color_error slds-p-horizontal_medium">{error}</div>
-        </template>
+            <lightning-button label="Hide all" variant="neutral" onclick={handleHideAll}></lightning-button>
+            <lightning-button label="Show all"  variant="neutral" onclick={handleShowAll} class="slds-m-left_x-small"></lightning-button>
+      </div>
+  
+        <!-- Chart -->
+        <canvas lwc:dom="manual" style="height:550px; max-width:95%;" class="chart"></canvas>
+      </div>
+  
+      <template if:true={error}>
+        <div class="slds-text-color_error slds-p-horizontal_medium">{error}</div>
+      </template>
     </lightning-card>
-</template>
+  </template>
