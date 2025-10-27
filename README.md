@@ -6,7 +6,7 @@ An admin configurable multi-line graph to drop in on any Lightning record page, 
 1. Works on any Lightning record page
 2. Works on any Object (standard or custom)
 3. Works with any relationships upto current record with dot notation
-4. Renders multiple line graphs of contrasting colors to 6 lines. Lines #7-12 are dashed to differentiate.
+4. Renders with automatically contrasting line graph colors, styles, and dot shapes.
 
 
 # How it works 
