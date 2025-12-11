@@ -1,6 +1,11 @@
 # MultiLineChart
 An admin configurable multi-line graph to drop in on any Lightning record page, that works with multiple relationship layers dynamically.
 
+# 🚀 Quick Install
+
+[![Install in Production](https://img.shields.io/badge/Install_on-Salesforce-00A1E0?style=for-the-badge&logo=salesforce)](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tg50000000ugX&isdtp=p1)
+
+[![Install in Sandbox](https://img.shields.io/badge/Install_on-Sandbox-FF9900?style=for-the-badge&logo=salesforce)](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tg50000000ugX&isdtp=p1)
 
 # Key Features
 1. Works on any Lightning record page
