@@ -11,5 +11,6 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# Read me 
+# Read me + assets
 **/README.md
+assets/**

@@ -33,17 +33,16 @@ An admin configurable multi-line graph to drop in on any Lightning record page, 
 
 
 # Images 
-*Single Line Example:*
-<img width="1698" height="660" alt="image" src="https://github.com/user-attachments/assets/31204f40-fd7a-4bc9-ac76-9a79f04d418d" />
+*Single Line Example:*<br/>
+![Single Line Example](./assets/lineGraphSingle.png)
 
 
-*Multi Line Example:*
-<img width="1706" height="657" alt="image" src="https://github.com/user-attachments/assets/5e60d22b-70c3-46ae-b0ba-0c5ce10c83da" />
+*Multi Line Example:*<br/>
+![Multi Line Example](./assets/lineGraphMulti.png)
 
 
 *Component in the App Builder:*<br/>
-<img width="340" height="370" alt="image" src="https://github.com/user-attachments/assets/3cbd94d3-1f0e-4d1c-b61b-40adaea0e21a" /><br/>
-<img width="337" height="776" alt="image" src="https://github.com/user-attachments/assets/f823920f-7883-4f80-8cc0-51fc0150b190" />
+![Config Panel](./assets/configPanel.png)
 
 
 # Support, Questions, or Feedback?
